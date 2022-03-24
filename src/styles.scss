@@ -98,6 +98,7 @@ main {
     @include xs {
       padding: 3.2rem;
       padding-right: 3.9rem;
+      border-radius: 3rem;
     }
 
     > :not(:last-child) {
