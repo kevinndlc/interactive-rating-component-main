@@ -101,10 +101,6 @@ main {
       border-radius: 3rem;
     }
 
-    > :not(:last-child) {
-      margin-bottom: 2.4rem;
-    }
-
     .image-wrapper {
       width: 40px;
       aspect-ratio: 1/1;
@@ -113,16 +109,25 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 3rem;
 
       @include xs {
         width: 48px;
       }
     }
 
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 2.4rem;
+    }
+
     .ratings {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2.4rem;
+      margin-bottom: 3.2rem;
 
       .rating {
         input[type="radio"] {
@@ -181,7 +186,7 @@ main {
         font-size: 1.5rem;
         line-height: 1.9rem;
         letter-spacing: 2px;
-        padding: 1.1rem 0;
+        padding: 1.1rem 0 1.5rem;
       }
 
       &:hover {
