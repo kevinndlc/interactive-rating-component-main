@@ -16,7 +16,7 @@ form.addEventListener('submit', (e) => {
       <div class="thank-you">
         <img src=${thankYouIllustration} alt="Thank you !">
         <span>You selected ${notation.rating} out of 5</span>
-        <h2>Thank you!</h2>
+        <h1>Thank you!</h1>
         <p>We appreciate you taking the time to give a rating.
           If you ever need more support, don't hesitate to get in touch!
         </p>
