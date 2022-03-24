@@ -1,0 +1,29 @@
+{
+  "name": "interactive-rating-component-main",
+  "version": "1.0.0",
+  "description": "This challenge is to build out this interactive rating component and get it looking as close to the design as possible.",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.4.0",
+    "buffer": "^6.0.3",
+    "parcel": "^2.4.0",
+    "utility-types": "^3.10.0"
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinndlc/interactive-rating-component-main.git"
+  },
+  "keywords": [
+    "frontend-mentor"
+  ],
+  "author": "Kevin Ndlc",
+  "bugs": {
+    "url": "https://github.com/kevinndlc/interactive-rating-component-main/issues"
+  },
+  "homepage": "https://github.com/kevinndlc/interactive-rating-component-main#readme"
+}

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+// RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// VARIABLES
+$clr-primary: hsl(25, 97%, 53%);
+$clr-white: hsl(0, 0%, 100%);
+$clr-light-grey: hsl(217, 12%, 63%);
+$clr-medium-grey: hsl(216, 12%, 54%);
+$clr-dark-blue: hsl(213, 19%, 18%);
+$clr-very-dark-blue: hsl(216, 12%, 8%);
+
+$font-stack: 'Overpass', sans-serif;
+
+// MEDIA QUERIES
+
+/* Portrait tablet to landscape and desktop */
+@mixin xs {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+// BASE STYLE
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: $clr-very-dark-blue;
+  color: $clr-light-grey;
+  font-family: $font-stack;
+}
+
+h2 {
+  color: $clr-white;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 700;
+
+  @include xs {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+  }
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+
+  @include xs {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// ---------------------------------------------------------------------------
+
+// SPECIFIC
+main {
+  min-height: 100vh;
+  padding: 2.4rem;
+  display: grid;
+
+  .card {
+    margin: auto;
+    max-width: 412px;
+    background: radial-gradient(
+      98.96% 98.96% at 50% 0%,
+      #232a34 0%,
+      #181e27 100%
+    );
+    padding: 2.4rem;
+    padding-bottom: 3.2rem;
+    border-radius: 1.5rem;
+
+    @include xs {
+      padding: 3.2rem;
+      padding-right: 3.9rem;
+    }
+
+    > :not(:last-child) {
+      margin-bottom: 2.4rem;
+    }
+
+    .image-wrapper {
+      width: 40px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: $clr-dark-blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include xs {
+        width: 48px;
+      }
+    }
+
+    .ratings {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.4rem;
+
+      .rating {
+        input[type="radio"] {
+          display: none;
+
+          &:checked + label {
+            background: $clr-medium-grey;
+            color: white;
+          }
+        }
+
+        label {
+          display: block;
+          width: 42px;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          background: $clr-dark-blue;
+          font-size: 1.4rem;
+          line-height: 42px;
+          font-weight: 700;
+          text-align: center;
+          cursor: pointer;
+          transition: 0.3s;
+
+          @include xs {
+            width: 51px;
+            line-height: 51px;
+            font-size: 1.6rem;
+          }
+
+          &:hover {
+            background: $clr-primary;
+            color: $clr-white;
+          }
+        }
+      }
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background: $clr-primary;
+      border: none;
+      border-radius: 150px;
+      padding: 1.2rem 0;
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 1.87px;
+      color: $clr-white;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+
+      @include xs {
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+        letter-spacing: 2px;
+        padding: 1.1rem 0;
+      }
+
+      &:hover {
+        background: $clr-white;
+        color: $clr-primary;
+      }
+    }
+
+    .thank-you {
+      padding-block: 1.3rem;
+      text-align: center;
+
+      > :not(:last-child) {
+        margin-bottom: 3.2rem;
+      }
+
+      img {
+        margin: auto;
+      }
+
+      span {
+        display: inline-block;
+        font-size: 1.4rem;
+        color: $clr-primary;
+        padding: 0.5rem 1.2rem;
+        border-radius: 150px;
+        background: $clr-dark-blue;
+
+        @include xs {
+          font-size: 1.5rem;
+          line-height: 2.4rem;
+          padding: 0.4rem 2rem;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  font-size: 1.4rem;
+  bottom: 2.4rem;
+  width: 100%;
+  text-align: center;
+
+  @include xs {
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: $clr-primary;
+  }
+}
